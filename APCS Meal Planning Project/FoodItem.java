@@ -1,4 +1,3 @@
-
 /**
  * Write a description of class FoodItem here.
  * 
@@ -7,7 +6,6 @@
  */
 public class FoodItem
 {
-    // instance variables
     private String name;
     private String type;
     private String properties;
@@ -17,7 +15,6 @@ public class FoodItem
      */
     public FoodItem(String inputName, String inputType, String inputProperties, int inputCalories)
     {
-        // initialise instance variables
         name = inputName;
         type = inputType;
         properties = inputProperties;
@@ -25,13 +22,34 @@ public class FoodItem
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     * Returns name of FoodItem
      */
-    public String getName(FoodItem food)
+    public String getName()
     {
         return name;
+    }
+
+    /**
+     * Returns type of FoodItem (Main, Side, or Drink)
+     */
+    public String getType()
+    {
+        return type;
+    }
+
+    /**
+     * Returns properties of FoodItem
+     */
+    public String getProperties()
+    {
+        return properties;
+    }
+
+    /**
+     * Returns name of FoodItem
+     */
+    public int getCalories()
+    {
+        return calories;
     }
 }

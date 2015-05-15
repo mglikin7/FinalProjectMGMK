@@ -1,19 +1,19 @@
 
 /**
- * Write a description of class Meal here.
+ * Write a description of class Processor here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Meal
+public class Processor
 {
     // instance variables - replace the example below with your own
     private int x;
 
     /**
-     * Constructor for objects of class Meal
+     * Constructor for objects of class Processor
      */
-    public Meal()
+    public Processor()
     {
         // initialise instance variables
         x = 0;

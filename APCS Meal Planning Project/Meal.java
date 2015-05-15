@@ -1,4 +1,3 @@
-
 /**
  * Write a description of class Meal here.
  * 
@@ -7,27 +6,34 @@
  */
 public class Meal
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class Meal
-     */
-    public Meal()
-    {
-        // initialise instance variables
-        x = 0;
+    FoodItem main;
+    FoodItem side;
+    FoodItem drink;
+    int tc; 
+    public Meal(FoodItem m, FoodItem s, FoodItem d){
+        main = m;
+        side = s;
+        drink = d;
+        tc=(m.getCalories()+s.getCalories()+d.getCalories());
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    
+    public FoodItem getMain(){
+     return main;   
     }
+    
+    public FoodItem getSide(){
+     return side;   
+    }
+    
+    public FoodItem getDrink(){
+     return drink;   
+    }
+    
+    public void printMeal(){
+        System.out.println("your drink is "+drink.getName()+".");
+        System.out.println("your side is "+side.getName()+".");
+        System.out.println("your main is "+main.getName()+".");
+        System.out.println("toatal calories: "+ tc+".");
+    }
+   
 }

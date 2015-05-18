@@ -1,4 +1,6 @@
-import java.lang.Math;
+
+import java.util.*;
+
 /**
  * Write a description of class Processor here.
  * 
@@ -7,11 +9,17 @@ import java.lang.Math;
  */
 public class Processor
 {
+
+    // instance variables - replace the example below with your own
+
+    ArrayList<FoodItem> breakfast = new ArrayList<FoodItem>();
+
     /**
      * Constructor for objects of class Processor
      */
-    public Processor()
+    public void main()
     {
+
         
     }
 
@@ -26,4 +34,9 @@ public class Processor
         BMI =  (int) BMI;
         
     }
-}
+
+  
+    }
+
+
+

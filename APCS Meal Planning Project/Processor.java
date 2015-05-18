@@ -1,4 +1,4 @@
-
+import java.lang.Math;
 /**
  * Write a description of class Processor here.
  * 
@@ -7,27 +7,23 @@
  */
 public class Processor
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
     /**
      * Constructor for objects of class Processor
      */
     public Processor()
     {
-        // initialise instance variables
-        x = 0;
+        
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     *
      */
-    public int sampleMethod(int y)
+    public int calorieCalculator(double weight, double height)
     {
-        // put your code here
-        return x + y;
+        double BMI;
+        int totalCalories = 0;
+        BMI = (weight / Math.pow(height, 2) * 703);
+        BMI =  (int) BMI;
+        
     }
 }

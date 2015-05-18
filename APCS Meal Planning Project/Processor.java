@@ -7,9 +7,10 @@ import java.util.*;
  */
 public class Processor
 {
-    ArrayList<Meal> breakfast = new ArrayList<Meal>();
-    ArrayList<Meal> lunch = new ArrayList<Meal>();
-    ArrayList<Meal> dinner = new ArrayList<Meal>();
+    ArrayList<FoodItem> breakfast = new ArrayList<FoodItem>();
+    ArrayList<FoodItem> lunch = new ArrayList<FoodItem>();
+    ArrayList<FoodItem> dinner = new ArrayList<FoodItem>();
+    ArrayList<FoodItem> snacks = new ArrayList<FoodItem>();
     /**
      * Constructor for objects of class Processor
      */
@@ -17,11 +18,8 @@ public class Processor
     {
         
     }
+    public double calorieCalculator(double weight, double height, String gender, int age)
 
-    /**
-     *
-     */
-    public double calorieCalculator(double weight, double height, int age, String gender)
     {
         double totalCalories = 0;
         if(gender.equals("male")) totalCalories = 66.47 + (13.75 * weight) + (5.0 * height) - (6.75 * age);

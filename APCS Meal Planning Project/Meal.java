@@ -9,13 +9,14 @@ public class Meal
     FoodItem main;
     FoodItem side;
     FoodItem drink;
-    int tc; 
-    public Meal(MainItem m, SideItem s, DrinkItem d)
-    {
+    int tc;
+    String whatMeal; 
+    public Meal(MainItem m, SideItem s, DrinkItem d, String blds){
         main = m;
         side = s;
         drink = d;
         tc=(m.getCalories()+s.getCalories()+d.getCalories());
+        whatMeal= blds; 
     }
 
     public FoodItem getMain()
@@ -36,8 +37,25 @@ public class Meal
     public void printMeal()
     {
         System.out.println("Your meal has a main dish of " + main +
-        ", a side of " + side +
-        ", and a beverage of " + drink + ".");
+            ", a side of " + side +
+            ", and a beverage of " + drink + ".");
         System.out.println("Your meal contains " + tc + " calories.");
+    }
+
+    public String getMealType(){
+        String mt = ""; 
+        if(whatMeal .equals("b")){
+            mt= "Breakfast";
+        }
+        else if(whatMeal .equals("l")){
+            mt= "Lunch";
+        }
+        else if(whatMeal .equals("d")){
+            mt= "Dinner";
+        }
+        else{
+            mt= "Snack";
+        }
+        return mt; 
     }
 }

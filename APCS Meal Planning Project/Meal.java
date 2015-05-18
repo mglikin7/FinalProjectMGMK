@@ -10,30 +10,34 @@ public class Meal
     FoodItem side;
     FoodItem drink;
     int tc; 
-    public Meal(MainItem m, SideItem s, DrinkItem d){
+    public Meal(MainItem m, SideItem s, DrinkItem d)
+    {
         main = m;
         side = s;
         drink = d;
         tc=(m.getCalories()+s.getCalories()+d.getCalories());
     }
-    
-    public FoodItem getMain(){
-     return main;   
+
+    public FoodItem getMain()
+    {
+        return main;   
     }
-    
-    public FoodItem getSide(){
-     return side;   
+
+    public FoodItem getSide()
+    {
+        return side;   
     }
-    
-    public FoodItem getDrink(){
-     return drink;   
+
+    public FoodItem getDrink()
+    {
+        return drink;   
     }
-    
-    public void printMeal(){
-        System.out.println("your drink is "+drink.getName()+".");
-        System.out.println("your side is "+side.getName()+".");
-        System.out.println("your main is "+main.getName()+".");
-        System.out.println("toatal calories: "+ tc+".");
+
+    public void printMeal()
+    {
+        System.out.println("Your meal has a main dish of " + main +
+        ", a side of " + side +
+        ", and a beverage of " + drink + ".");
+        System.out.println("Your meal contains " + tc + " calories.");
     }
-   
 }

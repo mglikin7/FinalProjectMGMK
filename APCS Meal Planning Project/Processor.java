@@ -1,6 +1,4 @@
-
 import java.util.*;
-
 /**
  * Write a description of class Processor here.
  * 
@@ -9,33 +7,27 @@ import java.util.*;
  */
 public class Processor
 {
-
-    // instance variables - replace the example below with your own
-
-    ArrayList<FoodItem> breakfast = new ArrayList<FoodItem>();
-
+    ArrayList<Meal> breakfast = new ArrayList<Meal>();
+    ArrayList<Meal> lunch = new ArrayList<Meal>();
+    ArrayList<Meal> dinner = new ArrayList<Meal>();
     /**
      * Constructor for objects of class Processor
      */
     public void main()
     {
-
         
     }
 
     /**
      *
      */
-    public int calorieCalculator(double weight, double height)
+    public double calorieCalculator(double weight, double height, int age, String gender)
     {
-        double BMI;
-        int totalCalories = 0;
-        BMI = (weight / Math.pow(height, 2) * 703);
-        BMI =  (int) BMI;
-        
+        double totalCalories = 0;
+        if(gender.equals("male")) totalCalories = 66.47 + (13.75 * weight) + (5.0 * height) - (6.75 * age);
+        else if(gender.equals("female")) totalCalories = 665.09 + (9.56 * weight) + (1.84 * height) - (4.67 * age);
+        return totalCalories;
     }
-
-  
     }
 
 

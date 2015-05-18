@@ -10,7 +10,7 @@ public class Meal
     FoodItem side;
     FoodItem drink;
     int tc; 
-    public Meal(FoodItem m, FoodItem s, FoodItem d){
+    public Meal(MainItem m, SideItem s, DrinkItem d){
         main = m;
         side = s;
         drink = d;

@@ -1,4 +1,4 @@
-
+import java.util.*;
 /**
  * Write a description of class Processor here.
  * 
@@ -8,26 +8,14 @@
 public class Processor
 {
     // instance variables - replace the example below with your own
-    private int x;
 
+    ArrayList<FoodItem> breakfast = new ArrayList<FoodItem>();
     /**
      * Constructor for objects of class Processor
      */
-    public Processor()
+    public void main()
     {
-        // initialise instance variables
-        x = 0;
+  
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
-    }
 }

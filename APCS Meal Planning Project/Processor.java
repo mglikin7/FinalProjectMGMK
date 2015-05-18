@@ -16,7 +16,8 @@ public class Processor
     ArrayList<FoodItem> lunch = new ArrayList<FoodItem>();
     ArrayList<FoodItem> dinner = new ArrayList<FoodItem>();
     ArrayList<FoodItem> snacks = new ArrayList<FoodItem>();
-
+    ArrayList<Meal> blds = new ArrayList<Meal>();
+    
     /**
      * Constructor for objects of class Processor
      */
@@ -37,6 +38,19 @@ public class Processor
         BMI =  (int) BMI;
         
     }
+    
+    public void createBreakfasts(int breakfastCalories){
+        
+    }
+    
+    public void creatLunches(int lunchCalories){
+        
+    }
+    
+    public void creatDinners(int dinnerCalories){
+        
+    }
+    
     
     
 

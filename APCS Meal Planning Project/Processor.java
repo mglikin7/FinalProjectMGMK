@@ -13,6 +13,9 @@ public class Processor
     // instance variables - replace the example below with your own
 
     ArrayList<FoodItem> breakfast = new ArrayList<FoodItem>();
+    ArrayList<FoodItem> lunch = new ArrayList<FoodItem>();
+    ArrayList<FoodItem> dinner = new ArrayList<FoodItem>();
+    ArrayList<FoodItem> snacks = new ArrayList<FoodItem>();
 
     /**
      * Constructor for objects of class Processor
@@ -26,7 +29,7 @@ public class Processor
     /**
      *
      */
-    public int calorieCalculator(double weight, double height)
+    public int calorieCalculator(double weight, double height, String gender, int age)
     {
         double BMI;
         int totalCalories = 0;
@@ -34,6 +37,8 @@ public class Processor
         BMI =  (int) BMI;
         
     }
+    
+    
 
   
     }

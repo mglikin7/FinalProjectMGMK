@@ -10,11 +10,13 @@ public class Meal
     FoodItem side;
     FoodItem drink;
     int tc; 
-    public Meal(MainItem m, SideItem s, DrinkItem d){
+    String whatMeal; 
+    public Meal(MainItem m, SideItem s, DrinkItem d, String blds){
         main = m;
         side = s;
         drink = d;
         tc=(m.getCalories()+s.getCalories()+d.getCalories());
+        whatMeal= blds; 
     }
     
     public FoodItem getMain(){
@@ -30,10 +32,31 @@ public class Meal
     }
     
     public void printMeal(){
+        System.out.println(getMealType()+":");
         System.out.println("your drink is "+drink.getName()+".");
         System.out.println("your side is "+side.getName()+".");
         System.out.println("your main is "+main.getName()+".");
         System.out.println("toatal calories: "+ tc+".");
     }
    
+    public String getMealType(){
+        String mt = ""; 
+        if(whatMeal .equals("b")){
+            mt= "Breakfast";
+          
+        }
+        else if(whatMeal .equals("l")){
+            mt= "Lunch";
+          
+        }
+        else if(whatMeal .equals("d")){
+            mt= "Dinner";
+          
+        }
+        else{
+            mt= "Snack";
+          
+        }
+        return mt; 
+    }
 }

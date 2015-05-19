@@ -18,11 +18,28 @@ dependency6.from=Processor
 dependency6.to=Meal
 dependency6.type=UsesDependency
 objectbench.height=76
+<<<<<<< HEAD
 objectbench.width=691
 package.editor.height=189
 package.editor.width=589
 package.editor.x=887
 package.editor.y=310
+=======
+<<<<<<< HEAD
+objectbench.width=781
+package.editor.height=260
+package.editor.width=679
+package.editor.x=926
+package.editor.y=562
+package.numDependencies=2
+package.numTargets=3
+=======
+objectbench.width=780
+package.editor.height=259
+package.editor.width=678
+package.editor.x=930
+package.editor.y=174
+>>>>>>> 29fa13e735084e590afa86c3e4a9de301bd5e3d7
 package.numDependencies=6
 package.numTargets=6
 package.showExtends=true
@@ -56,15 +73,24 @@ target2.x=150
 target2.y=110
 target3.editor.height=700
 target3.editor.width=900
+<<<<<<< HEAD
 target3.editor.x=41
 target3.editor.y=42
 target3.height=50
 target3.name=Meal
 target3.naviview.expanded=false
+=======
+target3.editor.x=488
+target3.editor.y=136
+target3.height=50
+target3.name=Meal
+target3.naviview.expanded=true
+>>>>>>> 29fa13e735084e590afa86c3e4a9de301bd5e3d7
 target3.showInterface=false
 target3.type=ClassTarget
 target3.typeParameters=
 target3.width=80
+<<<<<<< HEAD
 target3.x=70
 target3.y=10
 target4.editor.height=700
@@ -74,11 +100,35 @@ target4.editor.y=22
 target4.height=50
 target4.name=SideItem
 target4.naviview.expanded=false
+=======
+<<<<<<< HEAD
+target3.x=360
+target3.y=10
+=======
+<<<<<<< HEAD
+target3.x=350
+target3.y=40
+=======
+target3.x=110
+target3.y=110
+>>>>>>> f7e4bed9053fcc840bffd5e46f674e213749008c
+target4.editor.height=700
+target4.editor.width=900
+target4.editor.x=566
+target4.editor.y=104
+target4.height=50
+target4.name=SideItem
+target4.naviview.expanded=true
+>>>>>>> 29fa13e735084e590afa86c3e4a9de301bd5e3d7
 target4.showInterface=false
 target4.type=ClassTarget
 target4.typeParameters=
 target4.width=80
+<<<<<<< HEAD
 target4.x=230
+=======
+target4.x=110
+>>>>>>> 29fa13e735084e590afa86c3e4a9de301bd5e3d7
 target4.y=110
 target5.editor.height=700
 target5.editor.width=900
@@ -95,8 +145,13 @@ target5.x=230
 target5.y=10
 target6.editor.height=700
 target6.editor.width=900
+<<<<<<< HEAD
 target6.editor.x=0
 target6.editor.y=22
+=======
+target6.editor.x=535
+target6.editor.y=58
+>>>>>>> 29fa13e735084e590afa86c3e4a9de301bd5e3d7
 target6.height=50
 target6.name=Processor
 target6.naviview.expanded=false

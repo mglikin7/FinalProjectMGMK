@@ -44,6 +44,18 @@ public class Processor
     {
         
     }
+
+    
+    public void createSnacks(int snackChoice){
+        
+    }
+    
+    public void choice(int bChoice, int lChoice, int dChoice, int sChoice){
+        
+    }
+    
+    
+    
     }
 
 

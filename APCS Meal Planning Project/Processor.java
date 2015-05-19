@@ -12,19 +12,19 @@ public class Processor
     ArrayList<FoodItem> dinner = new ArrayList<FoodItem>();
     ArrayList<FoodItem> snacks = new ArrayList<FoodItem>();
     ArrayList<Meal> blds = new ArrayList<Meal>();
-    
+
     /**
      * Constructor for objects of class Processor
      */
     public void main()
     {
-        
+
     }
-    
+
     /**
      * http://www.bodybuilding.com/fun/calorie-know-how-get-equation-right-to-get-results.htm
      */
-    public double calorieCalculator(double weightInPounds, double heightInInches, int age, String gender, String goal)
+    public int calorieCalculator(int weightInPounds, int heightInInches, int age, String gender, String goal)
 
     {
         double totalCalories = 0;
@@ -34,30 +34,31 @@ public class Processor
         else if(gender.equals("female")) totalCalories = 665.09 + (9.56 * weightInPounds) + (1.84 * heightInInches) - (4.67 * age);
         if(goal.equals("gain")) totalCalories += 500;
         else if(goal.equals("lose")) totalCalories -= 500;
-        return totalCalories;
+        return (int) totalCalories;
     }
 
     public void createBreakfasts(int breakfastCalories)
     {
-        
-    }
-    
-    public void creatLunches(int lunchCalories)
-    {
-        
-    }
-    
-    public void creatDinners(int dinnerCalories)
-    {
-        
+
     }
 
-    
-    public void createSnacks(int snackChoice){
-        
+    public void creatLunches(int lunchCalories)
+    {
+
     }
-    
-    public void choice(int bChoice, int lChoice, int dChoice, int sChoice){
-        
+
+    public void creatDinners(int dinnerCalories)
+    {
+
     }
+
+    public void createSnacks(int snackChoice)
+    {
+
     }
+
+    public void choice(int bChoice, int lChoice, int dChoice, int sChoice)
+    {
+
+    }
+}

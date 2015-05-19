@@ -21,12 +21,19 @@ public class Processor
         
     }
     
-    public double calorieCalculator(double weight, double height, String gender, int age)
+    /**
+     * http://www.bodybuilding.com/fun/calorie-know-how-get-equation-right-to-get-results.htm
+     */
+    public double calorieCalculator(double weightInPounds, double heightInInches, int age, String gender, String goal)
 
     {
         double totalCalories = 0;
-        if(gender.equals("male")) totalCalories = 66.47 + (13.75 * weight) + (5.0 * height) - (6.75 * age);
-        else if(gender.equals("female")) totalCalories = 665.09 + (9.56 * weight) + (1.84 * height) - (4.67 * age);
+        weightInPounds /= 2.2;
+        heightInInches *= 2.54;
+        if(gender.equals("male")) totalCalories = 66.47 + (13.75 * weightInPounds) + (5.0 * heightInInches) - (6.75 * age);
+        else if(gender.equals("female")) totalCalories = 665.09 + (9.56 * weightInPounds) + (1.84 * heightInInches) - (4.67 * age);
+        if(goal.equals("gain")) totalCalories += 500;
+        else if(goal.equals("lose")) totalCalories -= 500;
         return totalCalories;
     }
 
@@ -53,10 +60,4 @@ public class Processor
     public void choice(int bChoice, int lChoice, int dChoice, int sChoice){
         
     }
-    
-    
-    
     }
-
-
-

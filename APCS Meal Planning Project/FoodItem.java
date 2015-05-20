@@ -7,15 +7,15 @@
 public class FoodItem
 {
     private String name;
-    private String properties;
+
     private int calories;
     /**
      * Constructor for objects of class FoodItem
      */
-    public FoodItem(String inputName,  String inputProperties, int inputCalories)
+    public FoodItem(String inputName,  int inputCalories)
     {
         name = inputName;
-        properties = inputProperties;
+
         calories = inputCalories;
     }
 
@@ -27,13 +27,7 @@ public class FoodItem
         return name;
     }
 
-    /**
-     * Returns properties of FoodItem
-     */
-    public String getProperties()
-    {
-        return properties;
-    }
+    
 
     /**
      * Returns name of FoodItem

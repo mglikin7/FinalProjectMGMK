@@ -14,9 +14,9 @@ public class MainItem extends FoodItem
     /**
      * Constructor for objects of class FoodItem
      */
-    public MainItem(String inputName,  String inputProperties, String t, int inputCalories, int s)
+    public MainItem(String inputName,   String t, int inputCalories, int s)
     {
-        super(inputName, inputProperties, inputCalories);
+        super(inputName,  inputCalories);
         type =t;
         size=s; 
     }

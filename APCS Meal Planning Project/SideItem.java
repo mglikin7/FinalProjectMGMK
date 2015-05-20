@@ -8,16 +8,15 @@ public class SideItem extends FoodItem
 {
     private String type;
     private String name;
-    private String properties;
     private int calories;
     private boolean doDip;
     private String dip; 
     /**
      * Constructor for objects of class FoodItem
      */
-    public SideItem(String inputName,  String inputProperties, String t, int inputCalories, String sauce)
+    public SideItem(String inputName,  String t, int inputCalories, String sauce)
     {
-        super(inputName, inputProperties, inputCalories);
+        super(inputName,  inputCalories);
         type =t;
         dip="none";
         doDip=false; 

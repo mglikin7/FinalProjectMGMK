@@ -10,19 +10,22 @@ public class DrinkItem extends  FoodItem
     private String name;
     private String properties;
     private int calories;
+    private int w;
     /**
      * Constructor for objects of class FoodItem
      */
-    public DrinkItem(String inputName,  String inputProperties, String t, int inputCalories)
+    public DrinkItem(String inputName, String t, int inputCalories)
     {
-        super(inputName, inputProperties, inputCalories);
+        super(inputName, inputCalories);
         type =t;
+        w=0;
     }
     public String getType()
     {
         return type; 
     }
     public void refill(){ 
-        calories*=2; 
+        calories+=calories-calories-(calories*w); 
+        w+=1;
     }
 }

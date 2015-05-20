@@ -12,15 +12,29 @@ public class Processor
     ArrayList<FoodItem> dinner = new ArrayList<FoodItem>();
     ArrayList<FoodItem> snacks = new ArrayList<FoodItem>();
     ArrayList<Meal> blds = new ArrayList<Meal>();
+    Scanner sc = new Scanner(System.in);
+    
     
     /**
      * Constructor for objects of class Processor
      */
     public void main()
     {
+        double w,h,a;
+        String g;
+        System.out.println("please enter in your wieght in pounds:");
+        w=sc.nextInt();
+        System.out.println("please enter in your height in inches: ");
+        h=sc.nextInt();
+        System.out.println("please enter in your age in years: ");
+        a=sc.nextInt();
+        System.out.println("enter in your gender(male or female): ");
+        g = sc.nextLine();
+        int tc = (int)(calorieCalculator(w,h,g,a));
+        
         
     }
-    public double calorieCalculator(double weight, double height, String gender, int age)
+    public double calorieCalculator(double weight, double height, String gender, double age)
 
     {
         double totalCalories = 0;

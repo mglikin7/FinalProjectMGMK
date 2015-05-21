@@ -12,7 +12,7 @@ public class Processor
     ArrayList<SideItem> side = new ArrayList<SideItem>();
     ArrayList<Meal> blds = new ArrayList<Meal>();
     Scanner sc = new Scanner(System.in);
-    
+
     /**
      * Constructor for objects of class Processor
      */
@@ -29,7 +29,7 @@ public class Processor
         FoodItem lemonade = new DrinkItem("lemonade","snack",99);
         FoodItem iceTea = new DrinkItem("ice tea", "dinner",2);
         FoodItem smoothie = new DrinkItem("smoothie", "snack", 400);
-        
+
         int w,h,a;
         String g;
         System.out.println("please enter in your wieght in pounds:");
@@ -44,9 +44,8 @@ public class Processor
         String go=sc.nextLine();
         int tc = calorieCalculator(w,h,a,g,go);
     }
-   
-    public int calorieCalculator(int weightInPounds, int heightInInches, int age, String gender, String goal)
 
+    public int calorieCalculator(int weightInPounds, int heightInInches, int age, String gender, String goal)
 
     {
         double totalCalories = 0;
@@ -62,6 +61,18 @@ public class Processor
     public void createBreakfasts(int breakfastCalories)
     {
         ArrayList<FoodItem> BreakfastFoods = new ArrayList<FoodItem>();
+        for(int ctr = 0; ctr <= main.size(); ctr++)
+        {
+            if(main.get(ctr).getType().equals("breakfast")) BreakfastFoods.add(main.get(ctr));
+        }
+        for(int ctr = 0; ctr <= side.size(); ctr++)
+        {
+            if(side.get(ctr).getType().equals("breakfast")) BreakfastFoods.add(side.get(ctr));
+        }
+        for(int ctr = 0; ctr <= drink.size(); ctr++)
+        {
+            if(drink.get(ctr).getType().equals("breakfast")) BreakfastFoods.add(drink.get(ctr));
+        }
     }
 
     public void creatLunches(int lunchCalories)

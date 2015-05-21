@@ -21,6 +21,7 @@ public class Processor
      */
     public void main()
     {
+
         FoodItem water = new DrinkItem("water","any",0);
         FoodItem oj = new DrinkItem ("orange juice", "breakfast", 111);
         FoodItem milk = new DrinkItem("milk","breakfast", 103);
@@ -48,14 +49,13 @@ public class Processor
         int tc = calorieCalculator(w,h,a,g,go);
         
         
+
     }
     
 
    
     public int calorieCalculator(int weightInPounds, int heightInInches, int age, String gender, String goal)
-    /**
-     * http://www.bodybuilding.com/fun/calorie-know-how-get-equation-right-to-get-results.htm
-     */
+
 
     {
         double totalCalories = 0;
@@ -88,8 +88,13 @@ public class Processor
 
     }
 
-    public void choice(int bChoice, int lChoice, int dChoice, int sChoice)
+    public ArrayList<Meal> choice(int bChoice, int lChoice, int dChoice, int sChoice)
     {
-
+        ArrayList<Meal> chosen = new ArrayList<Meal>();
+        chosen.add(blds.get(bChoice));
+        chosen.add(blds.get(lChoice));
+        chosen.add(blds.get(dChoice));
+        chosen.add(blds.get(sChoice));
+        return chosen;
     }
 }

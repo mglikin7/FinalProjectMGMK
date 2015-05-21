@@ -7,21 +7,17 @@ import java.util.*;
  */
 public class Processor
 {
-    ArrayList<FoodItem> drink = new ArrayList<FoodItem>();
-    ArrayList<FoodItem> main = new ArrayList<FoodItem>();
-    ArrayList<FoodItem> side = new ArrayList<FoodItem>();
+    ArrayList<DrinkItem> drink = new ArrayList<DrinkItem>();
+    ArrayList<MainItem> main = new ArrayList<MainItem>();
+    ArrayList<SideItem> side = new ArrayList<SideItem>();
     ArrayList<Meal> blds = new ArrayList<Meal>();
-
     Scanner sc = new Scanner(System.in);
     
-    
-
     /**
      * Constructor for objects of class Processor
      */
     public void main()
     {
-
         FoodItem water = new DrinkItem("water","any",0);
         FoodItem oj = new DrinkItem ("orange juice", "breakfast", 111);
         FoodItem milk = new DrinkItem("milk","breakfast", 103);
@@ -32,8 +28,8 @@ public class Processor
         FoodItem aj = new DrinkItem("Apple juice", "lunch",113);
         FoodItem lemonade = new DrinkItem("lemonade","snack",99);
         FoodItem iceTea = new DrinkItem("ice tea", "dinner",2);
-        
         FoodItem smoothie = new DrinkItem("smoothie", "snack", 400);
+        
         int w,h,a;
         String g;
         System.out.println("please enter in your wieght in pounds:");
@@ -47,12 +43,7 @@ public class Processor
         System.out.println("do you want to gain or lose weight: ");
         String go=sc.nextLine();
         int tc = calorieCalculator(w,h,a,g,go);
-        
-        
-
     }
-    
-
    
     public int calorieCalculator(int weightInPounds, int heightInInches, int age, String gender, String goal)
 
@@ -70,7 +61,7 @@ public class Processor
 
     public void createBreakfasts(int breakfastCalories)
     {
-
+        ArrayList<FoodItem> BreakfastFoods = new ArrayList<FoodItem>();
     }
 
     public void creatLunches(int lunchCalories)

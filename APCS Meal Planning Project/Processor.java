@@ -58,36 +58,92 @@ public class Processor
         return (int) totalCalories;
     }
 
-    public void createBreakfasts(int breakfastCalories)
+    public ArrayList<Meal> createBreakfasts(int breakfastCalories)
     {
-        ArrayList<FoodItem> BreakfastFoods = new ArrayList<FoodItem>();
-        for(int ctr = 0; ctr <= main.size(); ctr++)
+        ArrayList<Meal> BreakfastMeals = new ArrayList<Meal>();
+        int ctr4 = 1;
+        for(int ctr1 = 0; ctr1 <= main.size(); ctr1++)
         {
-            if(main.get(ctr).getType().equals("breakfast")) BreakfastFoods.add(main.get(ctr));
+            for(int ctr2 = 0; ctr2 <= side.size(); ctr2++)
+            {
+                for(int ctr3 = 0; ctr3 <= drink.size(); ctr3++)
+                {
+                    if(main.get(ctr1).getCalories() + side.get(ctr2).getCalories() + drink.get(ctr3).getCalories() == breakfastCalories)
+                    {
+                        Meal current = new Meal(main.get(ctr1), side.get(ctr2), drink.get(ctr3), "breakfast" + "ctr4");
+                        BreakfastMeals.add(current);
+                        ctr4++;
+                    }
+                }
+            }
         }
-        for(int ctr = 0; ctr <= side.size(); ctr++)
-        {
-            if(side.get(ctr).getType().equals("breakfast")) BreakfastFoods.add(side.get(ctr));
-        }
-        for(int ctr = 0; ctr <= drink.size(); ctr++)
-        {
-            if(drink.get(ctr).getType().equals("breakfast")) BreakfastFoods.add(drink.get(ctr));
-        }
+        return BreakfastMeals;
     }
 
-    public void creatLunches(int lunchCalories)
+    public ArrayList<Meal> createLunches(int lunchCalories)
     {
-
+        ArrayList<Meal> LunchMeals = new ArrayList<Meal>();
+        int ctr4 = 1;
+        for(int ctr1 = 0; ctr1 <= main.size(); ctr1++)
+        {
+            for(int ctr2 = 0; ctr2 <= side.size(); ctr2++)
+            {
+                for(int ctr3 = 0; ctr3 <= drink.size(); ctr3++)
+                {
+                    if(main.get(ctr1).getCalories() + side.get(ctr2).getCalories() + drink.get(ctr3).getCalories() == lunchCalories)
+                    {
+                        Meal current = new Meal(main.get(ctr1), side.get(ctr2), drink.get(ctr3), "lunch" + "ctr4");
+                        LunchMeals.add(current);
+                        ctr4++;
+                    }
+                }
+            }
+        }
+        return LunchMeals;
     }
 
-    public void creatDinners(int dinnerCalories)
+    public ArrayList<Meal> createDinners(int dinnerCalories)
     {
-
+        ArrayList<Meal> DinnerMeals = new ArrayList<Meal>();
+        int ctr4 = 1;
+        for(int ctr1 = 0; ctr1 <= main.size(); ctr1++)
+        {
+            for(int ctr2 = 0; ctr2 <= side.size(); ctr2++)
+            {
+                for(int ctr3 = 0; ctr3 <= drink.size(); ctr3++)
+                {
+                    if(main.get(ctr1).getCalories() + side.get(ctr2).getCalories() + drink.get(ctr3).getCalories() == dinnerCalories)
+                    {
+                        Meal current = new Meal(main.get(ctr1), side.get(ctr2), drink.get(ctr3), "dinner" + "ctr4");
+                        DinnerMeals.add(current);
+                        ctr4++;
+                    }
+                }
+            }
+        }
+        return DinnerMeals;
     }
 
-    public void createSnacks(int snackChoice)
+    public ArrayList<Meal> createSnacks(int snackCalories)
     {
-
+        ArrayList<Meal> SnackMeals = new ArrayList<Meal>();
+        int ctr4 = 1;
+        for(int ctr1 = 0; ctr1 <= main.size(); ctr1++)
+        {
+            for(int ctr2 = 0; ctr2 <= side.size(); ctr2++)
+            {
+                for(int ctr3 = 0; ctr3 <= drink.size(); ctr3++)
+                {
+                    if(main.get(ctr1).getCalories() + side.get(ctr2).getCalories() + drink.get(ctr3).getCalories() == snackCalories)
+                    {
+                        Meal current = new Meal(main.get(ctr1), side.get(ctr2), drink.get(ctr3), "lunch" + "ctr4");
+                        SnackMeals.add(current);
+                        ctr4++;
+                    }
+                }
+            }
+        }
+        return SnackMeals;
     }
 
     public ArrayList<Meal> choice(int bChoice, int lChoice, int dChoice, int sChoice)

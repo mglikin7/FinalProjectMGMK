@@ -32,8 +32,27 @@ public class Processor
         FoodItem aj = new DrinkItem("Apple juice", "lunch",113);
         FoodItem lemonade = new DrinkItem("lemonade","snack",99);
         FoodItem iceTea = new DrinkItem("ice tea", "dinner",2);
-        
         FoodItem smoothie = new DrinkItem("smoothie", "snack", 400);
+        FoodItem thebloodofyourenemies = new DrinkItem("The Blood of your Enemies","dinner", 124);
+        
+        FoodItem pancake = new MainItem("Pancakes(x4)","breakfast",344);
+        FoodItem cerial = new MainItem("cerial","breakfast",606);
+        FoodItem bagel = new MainItem("bagel with cream chease","breakfast",450);
+        FoodItem oatmeal = new MainItem("oatmeal","any",339);
+        FoodItem eggs = new MainItem("eggs","breakfast",234);
+        FoodItem sausagePatties = new MainItem("saussage patties","breakfast",229);
+        FoodItem pbj = new MainItem("Peanut butter and jelly andwich","lunch",376);
+        FoodItem gchease = new MainItem("Grilled Chease Sandwich","lunch",291);
+        FoodItem delisandwich = new MainItem("Deli sandwich","lunch",350);
+        FoodItem Pizza = new MainItem("pizza","lunch",285);
+        FoodItem hamburger = new MainItem("hamburger","lunch",354);
+        FoodItem hotdog = new MainItem("hotDog","lunch",151);
+        FoodItem spaghetti = new MainItem("spaghetti","dinner",221);
+        FoodItem meatandpotatoes = new MainItem("beef and potatoes","dinner",376);
+        FoodItem steak = new MainItem("porterhouse steak","dinner",282);
+        FoodItem chicken = new MainItem("chicken","dinner",306);
+        FoodItem expensice = new MainItem("Strawberies Arnaud","dinner",300);
+        
         int w,h,a;
         String g;
         System.out.println("please enter in your wieght in pounds:");
@@ -70,7 +89,7 @@ public class Processor
 
     public void createBreakfasts(int breakfastCalories)
     {
-
+ 
     }
 
     public void creatLunches(int lunchCalories)

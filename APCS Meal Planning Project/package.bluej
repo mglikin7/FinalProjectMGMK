@@ -27,11 +27,19 @@ dependency9.from=Processor
 dependency9.to=SideItem
 dependency9.type=UsesDependency
 objectbench.height=76
+<<<<<<< HEAD
 objectbench.width=954
 package.editor.height=430
 package.editor.width=852
 package.editor.x=97
 package.editor.y=34
+=======
+objectbench.width=691
+package.editor.height=189
+package.editor.width=589
+package.editor.x=786
+package.editor.y=22
+>>>>>>> 6085ac6a3625d0e9ff9e011910acc7889c383a1d
 package.numDependencies=9
 package.numTargets=6
 package.showExtends=true
@@ -39,8 +47,8 @@ package.showUses=true
 project.charset=UTF-8
 target1.editor.height=700
 target1.editor.width=900
-target1.editor.x=242
-target1.editor.y=106
+target1.editor.x=0
+target1.editor.y=22
 target1.height=50
 target1.name=DrinkItem
 target1.naviview.expanded=false
@@ -48,7 +56,11 @@ target1.showInterface=false
 target1.type=ClassTarget
 target1.typeParameters=
 target1.width=90
+<<<<<<< HEAD
 target1.x=0
+=======
+target1.x=310
+>>>>>>> 6085ac6a3625d0e9ff9e011910acc7889c383a1d
 target1.y=110
 target2.editor.height=700
 target2.editor.width=900
@@ -61,12 +73,21 @@ target2.showInterface=false
 target2.type=ClassTarget
 target2.typeParameters=
 target2.width=80
+<<<<<<< HEAD
 target2.x=310
 target2.y=100
 target3.editor.height=700
 target3.editor.width=900
 target3.editor.x=0
 target3.editor.y=22
+=======
+target2.x=150
+target2.y=110
+target3.editor.height=700
+target3.editor.width=900
+target3.editor.x=586
+target3.editor.y=343
+>>>>>>> 6085ac6a3625d0e9ff9e011910acc7889c383a1d
 target3.height=50
 target3.name=Meal
 target3.naviview.expanded=false
@@ -74,8 +95,13 @@ target3.showInterface=false
 target3.type=ClassTarget
 target3.typeParameters=
 target3.width=80
+<<<<<<< HEAD
 target3.x=350
 target3.y=20
+=======
+target3.x=70
+target3.y=10
+>>>>>>> 6085ac6a3625d0e9ff9e011910acc7889c383a1d
 target4.editor.height=700
 target4.editor.width=900
 target4.editor.x=0
@@ -87,12 +113,17 @@ target4.showInterface=false
 target4.type=ClassTarget
 target4.typeParameters=
 target4.width=80
+<<<<<<< HEAD
 target4.x=140
 target4.y=100
+=======
+target4.x=230
+target4.y=110
+>>>>>>> 6085ac6a3625d0e9ff9e011910acc7889c383a1d
 target5.editor.height=700
 target5.editor.width=900
-target5.editor.x=626
-target5.editor.y=116
+target5.editor.x=629
+target5.editor.y=112
 target5.height=50
 target5.name=FoodItem
 target5.naviview.expanded=true
@@ -100,12 +131,17 @@ target5.showInterface=false
 target5.type=ClassTarget
 target5.typeParameters=
 target5.width=80
-target5.x=110
-target5.y=0
+target5.x=230
+target5.y=10
 target6.editor.height=700
 target6.editor.width=900
+<<<<<<< HEAD
 target6.editor.x=905
 target6.editor.y=173
+=======
+target6.editor.x=0
+target6.editor.y=22
+>>>>>>> 6085ac6a3625d0e9ff9e011910acc7889c383a1d
 target6.height=50
 target6.name=Processor
 target6.naviview.expanded=false
@@ -113,5 +149,5 @@ target6.showInterface=false
 target6.type=ClassTarget
 target6.typeParameters=
 target6.width=80
-target6.x=530
+target6.x=480
 target6.y=110

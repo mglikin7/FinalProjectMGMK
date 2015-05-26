@@ -18,59 +18,92 @@ public class Processor
      */
     public void main()
     {
-        FoodItem water = new DrinkItem("water","any",0);
-        FoodItem oj = new DrinkItem ("orange juice", "breakfast", 111);
-        FoodItem milk = new DrinkItem("milk","breakfast", 103);
-        FoodItem coffee = new DrinkItem("coffee","breakfast",1);
-        FoodItem tea = new DrinkItem("tea","any",2);
-        FoodItem soda = new DrinkItem("soda","lunch",182);
-        FoodItem cmilk = new DrinkItem("chocolate milk","lunch",209);
-        FoodItem aj = new DrinkItem("Apple juice", "lunch",113);
-        FoodItem lemonade = new DrinkItem("lemonade","snack",99);
-        FoodItem iceTea = new DrinkItem("ice tea", "dinner",2);
-        FoodItem smoothie = new DrinkItem("smoothie", "snack", 400);
-        FoodItem thebloodofyourenemies = new DrinkItem("The Blood of your Enemies","dinner", 124);
+        DrinkItem water = new DrinkItem("water","any",0);
+        DrinkItem oj = new DrinkItem ("orange juice", "breakfast", 111);
+        DrinkItem milk = new DrinkItem("milk","breakfast", 103);
+        DrinkItem coffee = new DrinkItem("coffee","breakfast",1);
+        DrinkItem tea = new DrinkItem("tea","any",2);
+        DrinkItem soda = new DrinkItem("soda","lunch",182);
+        DrinkItem cmilk = new DrinkItem("chocolate milk","lunch",209);
+        DrinkItem aj = new DrinkItem("Apple juice", "lunch",113);
+        DrinkItem lemonade = new DrinkItem("lemonade","snack",99);
+        DrinkItem iceTea = new DrinkItem("ice tea", "dinner",2);
+        DrinkItem smoothie = new DrinkItem("smoothie", "any", 400);
+        DrinkItem thebloodofyourenemies = new DrinkItem("The Blood of your Enemies","dinner", 124);
+        
+        drink.add(water);
+        drink.add(oj);
+        drink.add(milk);
+        drink.add(coffee);
+        drink.add(tea);
+        drink.add(soda);
+        drink.add(cmilk);
+        drink.add(aj);
+        drink.add(lemonade);
+        drink.add(iceTea);
+        drink.add(smoothie);
+        drink.add(thebloodofyourenemies);
+        
 
-        FoodItem pancake = new MainItem("Pancakes(x4)","breakfast",344,2);
-        FoodItem cerial = new MainItem("cerial","breakfast",606,3);
-        FoodItem bagel = new MainItem("bagel with cream chease","breakfast",450,3);
-        FoodItem oatmeal = new MainItem("oatmeal","any",339,2);
-        FoodItem eggs = new MainItem("eggs","breakfast",234,1);
-        FoodItem sausagePatties = new MainItem("saussage patties","breakfast",229,1);
+        MainItem pancake = new MainItem("Pancakes(x4)","breakfast",344,2);
+        MainItem cerial = new MainItem("cerial","breakfast",606,3);
+        MainItem bagel = new MainItem("bagel with cream chease","breakfast",450,3);
+        MainItem oatmeal = new MainItem("oatmeal","any",339,2);
+        MainItem eggs = new MainItem("eggs","breakfast",234,1);
+        MainItem sausagePatties = new MainItem("saussage patties","breakfast",229,1);
+        MainItem pbj = new MainItem("Peanut butter and jelly andwich","lunch",376,2);
+        MainItem gchease = new MainItem("Grilled Chease Sandwich","lunch",291,1);
+        MainItem delisandwich = new MainItem("Deli sandwich","lunch",350,2);
+        MainItem Pizza = new MainItem("pizza","lunch",285,1);
+        MainItem hamburger = new MainItem("hamburger","lunch",354,2);
+        MainItem hotdog = new MainItem("hotDog","lunch",151,1);
+        MainItem spaghetti = new MainItem("spaghetti","dinner",221,1);
+        MainItem meatandpotatoes = new MainItem("beef and potatoes","dinner",376,2);
+        MainItem steak = new MainItem("porterhouse steak","dinner",282,1);
+        MainItem chicken = new MainItem("chicken","dinner",306,2);
+        MainItem expensive = new MainItem("Strawberies Arnaud","dinner",300,2);
+        MainItem fish = new MainItem("cooked atlantic salmonm","dinner",366,2);
+        
+        main.add(pancake);
+        main.add(cerial);
+        main.add(bagel);
+        main.add(oatmeal);
+        main.add(eggs);
+        main.add(sausagePatties);
+        main.add(pbj);
+        main.add(gchease);
+        main.add(delisandwich);
+        main.add(Pizza);
+        main.add(hamburger);
+        main.add(hotdog);
+        main.add(spaghetti);
+        main.add(meatandpotatoes);
+        main.add(steak);
+        main.add(chicken);
+        main.add(expensive);
+        main.add(fish);
+        
 
-        FoodItem pbj = new MainItem("Peanut butter and jelly andwich","lunch",376,2);
-        FoodItem gchease = new MainItem("Grilled Chease Sandwich","lunch",291,1);
-        FoodItem delisandwich = new MainItem("Deli sandwich","lunch",350,2);
-        FoodItem Pizza = new MainItem("pizza","lunch",285,1);
-        FoodItem hamburger = new MainItem("hamburger","lunch",354,2);
-        FoodItem hotdog = new MainItem("hotDog","lunch",151,1);
-
-        FoodItem spaghetti = new MainItem("spaghetti","dinner",221,1);
-        FoodItem meatandpotatoes = new MainItem("beef and potatoes","dinner",376,2);
-        FoodItem steak = new MainItem("porterhouse steak","dinner",282,1);
-        FoodItem chicken = new MainItem("chicken","dinner",306,2);
-        FoodItem expensive = new MainItem("Strawberies Arnaud","dinner",300,2);
-        FoodItem fish = new MainItem("cooked atlantic salmonm","dinner",366,2);
-
-        FoodItem rice = new SideItem("rice","dinner",111,"none");
-        FoodItem gbeans = new SideItem("grean beans","dinner",44,"none");
-        FoodItem mpotates = new SideItem("mashed potatoes","dinner",214, "gravy");
-
-        FoodItem appleslices = new SideItem("Apple slices ","snack",95+188,"peanut butter");
-        FoodItem gbar = new SideItem("Granola Bar","snack",132,"none");
-        FoodItem chips = new SideItem("generic chips","snacks",152,"none");
-
-        FoodItem fries = new SideItem("small french fries","lunch",222,"ketchup");
-        FoodItem ttchips = new SideItem("trtilla chips(10chips)","lunch",100,"salsa");
-        FoodItem fcup = new SideItem("fruit cup","lunch",64,"none");
-
-        FoodItem nuts = new SideItem("nut mix","breakfast",172,"none");
-        FoodItem yogurt = new SideItem("Yogurt","breakfast",100,"none");
-        FoodItem hashbrown = new SideItem("hashbrown","breakfast",235,"none");
-
-        FoodItem salad = new SideItem("salad","any",137,"ranch dressing");
-        FoodItem apple = new SideItem("Apple","any",95,"none");
-        FoodItem grapes = new SideItem("grapes","any", 62,"none");
+        
+        SideItem rice = new SideItem("rice","dinner",111,"none");
+        SideItem gbeans = new SideItem("grean beans","dinner",44,"none");
+        SideItem mpotates = new SideItem("mashed potatoes","dinner",214, "gravy");
+        SideItem appleslices = new SideItem("Apple slices ","snack",95+188,"peanut butter");
+        SideItem gbar = new SideItem("Granola Bar","snack",132,"none");
+        SideItem chips = new SideItem("generic chips","snacks",152,"none");
+        SideItem fries = new SideItem("small french fries","lunch",222,"ketchup");
+        SideItem ttchips = new SideItem("trtilla chips(10chips)","lunch",100,"salsa");
+        SideItem fcup = new SideItem("fruit cup","lunch",64,"none");
+        SideItem nuts = new SideItem("nut mix","breakfast",172,"none");
+        SideItem yogurt = new SideItem("Yogurt","breakfast",100,"none");
+        SideItem hashbrown = new SideItem("hashbrown","breakfast",235,"none");
+        SideItem salad = new SideItem("salad","any",137,"ranch dressing");
+        SideItem apple = new SideItem("Apple","any",95,"none");
+        SideItem grapes = new SideItem("grapes","any", 62,"none");
+        
+        side.add(rice);
+        
+        
 
         int w,h,a; 
         String g;

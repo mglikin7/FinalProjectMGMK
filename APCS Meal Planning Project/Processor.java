@@ -111,16 +111,16 @@ public class Processor
                 for(int ctr3 = 0; ctr3 <= drink.size(); ctr3++)
                 {
                     if((main.get(ctr1).getCalories() + side.get(ctr2).getCalories() + drink.get(ctr3).getCalories() >= breakfastCalories - 300
-                        || main.get(ctr1).getCalories() + side.get(ctr2).getCalories() + drink.get(ctr3).getCalories() <= breakfastCalories + 300)
+                    || main.get(ctr1).getCalories() + side.get(ctr2).getCalories() + drink.get(ctr3).getCalories() <= breakfastCalories + 300)
                     && ((main.get(ctr1).getType().equals("breakfast") || main.get(ctr1).getType().equals("any"))
-                        && (side.get(ctr2).getType().equals("breakfast") || side.get(ctr2).getType().equals("any")))){
-
-         
-                    Meal current = new Meal(main.get(ctr1), side.get(ctr2), drink.get(ctr3), "b");
-                    BreakfastMeals.add(current);
-                    ctr4++;
-
-                }}
+                    && (side.get(ctr2).getType().equals("breakfast") || side.get(ctr2).getType().equals("any"))
+                    && (drink.get(ctr3).getType().equals("breakfast") || drink.get(ctr3).getType().equals("any"))))
+                    {
+                        Meal current = new Meal(main.get(ctr1), side.get(ctr2), drink.get(ctr3), "b");
+                        BreakfastMeals.add(current);
+                        ctr4++;
+                    }
+                }
             }
         }
         return BreakfastMeals;
@@ -137,10 +137,10 @@ public class Processor
                 for(int ctr3 = 0; ctr3 <= drink.size(); ctr3++)
                 {
                     if((main.get(ctr1).getCalories() + side.get(ctr2).getCalories() + drink.get(ctr3).getCalories() >= lunchCalories - 300
-                        || main.get(ctr1).getCalories() + side.get(ctr2).getCalories() + drink.get(ctr3).getCalories() <= lunchCalories + 300)
+                    || main.get(ctr1).getCalories() + side.get(ctr2).getCalories() + drink.get(ctr3).getCalories() <= lunchCalories + 300)
                     && ((main.get(ctr1).getType().equals("lunch") || main.get(ctr1).getType().equals("any"))
-                        && (side.get(ctr2).getType().equals("lunch") || side.get(ctr2).getType().equals("any"))
-                        && (drink.get(ctr3).getType().equals("lunch") || drink.get(ctr3).getType().equals("any"))))
+                    && (side.get(ctr2).getType().equals("lunch") || side.get(ctr2).getType().equals("any"))
+                    && (drink.get(ctr3).getType().equals("lunch") || drink.get(ctr3).getType().equals("any"))))
                     {
                         Meal current = new Meal(main.get(ctr1), side.get(ctr2), drink.get(ctr3), "l");
                         LunchMeals.add(current);
@@ -163,11 +163,10 @@ public class Processor
                 for(int ctr3 = 0; ctr3 <= drink.size(); ctr3++)
                 {
                     if((main.get(ctr1).getCalories() + side.get(ctr2).getCalories() + drink.get(ctr3).getCalories() >= dinnerCalories - 300
-                        || main.get(ctr1).getCalories() + side.get(ctr2).getCalories() + drink.get(ctr3).getCalories() <= dinnerCalories + 300)
+                    || main.get(ctr1).getCalories() + side.get(ctr2).getCalories() + drink.get(ctr3).getCalories() <= dinnerCalories + 300)
                     && ((main.get(ctr1).getType().equals("dinner") || main.get(ctr1).getType().equals("any"))
-                        && (side.get(ctr2).getType().equals("dinner") || side.get(ctr2).getType().equals("any"))
-                        && (drink.get(ctr3).getType().equals("dinner") || drink.get(ctr3).getType().equals("any"))))
-
+                    && (side.get(ctr2).getType().equals("dinner") || side.get(ctr2).getType().equals("any"))
+                    && (drink.get(ctr3).getType().equals("dinner") || drink.get(ctr3).getType().equals("any"))))
                     {
                         Meal current = new Meal(main.get(ctr1), side.get(ctr2), drink.get(ctr3), "d");
                         DinnerMeals.add(current);
@@ -190,10 +189,10 @@ public class Processor
                 for(int ctr3 = 0; ctr3 <= drink.size(); ctr3++)
                 {
                     if((main.get(ctr1).getCalories() + side.get(ctr2).getCalories() + drink.get(ctr3).getCalories() >= snackCalories - 300
-                        || main.get(ctr1).getCalories() + side.get(ctr2).getCalories() + drink.get(ctr3).getCalories() <= snackCalories + 300)
+                    || main.get(ctr1).getCalories() + side.get(ctr2).getCalories() + drink.get(ctr3).getCalories() <= snackCalories + 300)
                     && ((main.get(ctr1).getType().equals("snack") || main.get(ctr1).getType().equals("any"))
-                        && (side.get(ctr2).getType().equals("snack") || side.get(ctr2).getType().equals("any"))
-                        && (drink.get(ctr3).getType().equals("snack") || drink.get(ctr3).getType().equals("any"))))
+                    && (side.get(ctr2).getType().equals("snack") || side.get(ctr2).getType().equals("any"))
+                    && (drink.get(ctr3).getType().equals("snack") || drink.get(ctr3).getType().equals("any"))))
                     {
                         Meal current = new Meal(main.get(ctr1), side.get(ctr2), drink.get(ctr3), "s");
                         SnackMeals.add(current);

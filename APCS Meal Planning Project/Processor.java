@@ -74,7 +74,7 @@ public class Processor
 
         int w,h,a; 
         String g;
-        System.out.println("please enter in your wieght in pounds:");
+        System.out.println("please enter in your weight in pounds:");
         w=sc.nextInt();
         System.out.println("please enter in your height in inches: ");
         h=sc.nextInt();
@@ -84,6 +84,8 @@ public class Processor
         g = sc.nextLine();
         System.out.println("do you want to gain or lose weight: ");
         String go=sc.nextLine();
+        if((w > 500 || w < 50) && a > 10) System.out.println("Please see a doctor immidiately");
+        if(!g.equals("male") || !g.equals("female")) System.out.println("Please enter a valid gender");
         int tc = calorieCalculator(w,h,a,g,go);
     }
 

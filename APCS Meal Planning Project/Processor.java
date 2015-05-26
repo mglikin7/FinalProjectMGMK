@@ -52,7 +52,6 @@ public class Processor
         FoodItem expensive = new MainItem("Strawberies Arnaud","dinner",300,2);
         FoodItem fish = new MainItem("cooked atlantic salmonm","dinner",366,2);
 
-        
         FoodItem rice = new SideItem("rice","dinner",111,"none");
         FoodItem gbeans = new SideItem("grean beans","dinner",44,"none");
         FoodItem mpotates = new SideItem("mashed potatoes","dinner",214, "gravy");
@@ -73,8 +72,6 @@ public class Processor
         FoodItem apple = new SideItem("Apple","any",95,"none");
         FoodItem grapes = new SideItem("grapes","any", 62,"none");
 
-        
-
         int w,h,a; 
         String g;
         System.out.println("please enter in your wieght in pounds:");
@@ -90,7 +87,7 @@ public class Processor
         int tc = calorieCalculator(w,h,a,g,go);
     }
 
-    public int calorieCalculator(int weightInPounds, int heightInInches, int age, String gender, String goal)
+     public int calorieCalculator(int weightInPounds, int heightInInches, int age, String gender, String goal)
 
     {
         double totalCalories = 0;
@@ -105,7 +102,6 @@ public class Processor
 
     public ArrayList<Meal> createBreakfasts(int breakfastCalories)
     {
-
         ArrayList<Meal> BreakfastMeals = new ArrayList<Meal>();
         int ctr4 = 1;
         for(int ctr1 = 0; ctr1 <= main.size(); ctr1++)
@@ -115,23 +111,20 @@ public class Processor
                 for(int ctr3 = 0; ctr3 <= drink.size(); ctr3++)
                 {
                     if((main.get(ctr1).getCalories() + side.get(ctr2).getCalories() + drink.get(ctr3).getCalories() >= breakfastCalories - 300
-                        || main.get(ctr1).getCalories() + side.get(ctr2).getCalories() + drink.get(ctr3).getCalories() <= breakfastCalories + 300)
+                    || main.get(ctr1).getCalories() + side.get(ctr2).getCalories() + drink.get(ctr3).getCalories() <= breakfastCalories + 300)
                     && ((main.get(ctr1).getType().equals("breakfast") || main.get(ctr1).getType().equals("any"))
-                        && (side.get(ctr2).getType().equals("breakfast") || side.get(ctr2).getType().equals("any"))
-                        && (drink.get(ctr3).getType().equals("breakfast") || drink.get(ctr3).getType().equals("any"))))
-
-                        Meal current = new Meal(main.get(ctr1), side.get(ctr2), drink.get(ctr3), "breakfast" , "b");
-
-                    Meal current = new Meal(main.get(ctr1), side.get(ctr2), drink.get(ctr3), "b");
-
-                    BreakfastMeals.add(current);
-                    ctr4++;
+                    && (side.get(ctr2).getType().equals("breakfast") || side.get(ctr2).getType().equals("any"))
+                    && (drink.get(ctr3).getType().equals("breakfast") || drink.get(ctr3).getType().equals("any"))))
+                    {
+                        Meal current = new Meal(main.get(ctr1), side.get(ctr2), drink.get(ctr3), "b");
+                        BreakfastMeals.add(current);
+                        ctr4++;
+                    }
                 }
             }
         }
+        return BreakfastMeals;
     }
-    return BreakfastMeals;
-
 
     public ArrayList<Meal> createLunches(int lunchCalories)
     {
@@ -144,14 +137,11 @@ public class Processor
                 for(int ctr3 = 0; ctr3 <= drink.size(); ctr3++)
                 {
                     if((main.get(ctr1).getCalories() + side.get(ctr2).getCalories() + drink.get(ctr3).getCalories() >= lunchCalories - 300
-                        || main.get(ctr1).getCalories() + side.get(ctr2).getCalories() + drink.get(ctr3).getCalories() <= lunchCalories + 300)
+                    || main.get(ctr1).getCalories() + side.get(ctr2).getCalories() + drink.get(ctr3).getCalories() <= lunchCalories + 300)
                     && ((main.get(ctr1).getType().equals("lunch") || main.get(ctr1).getType().equals("any"))
-                        && (side.get(ctr2).getType().equals("lunch") || side.get(ctr2).getType().equals("any"))
-                        && (drink.get(ctr3).getType().equals("lunch") || drink.get(ctr3).getType().equals("any"))))
+                    && (side.get(ctr2).getType().equals("lunch") || side.get(ctr2).getType().equals("any"))
+                    && (drink.get(ctr3).getType().equals("lunch") || drink.get(ctr3).getType().equals("any"))))
                     {
-
-                        Meal current = new Meal(main.get(ctr1), side.get(ctr2), drink.get(ctr3), "lunch" , "l");
-
                         Meal current = new Meal(main.get(ctr1), side.get(ctr2), drink.get(ctr3), "l");
                         LunchMeals.add(current);
                         ctr4++;
@@ -173,16 +163,12 @@ public class Processor
                 for(int ctr3 = 0; ctr3 <= drink.size(); ctr3++)
                 {
                     if((main.get(ctr1).getCalories() + side.get(ctr2).getCalories() + drink.get(ctr3).getCalories() >= dinnerCalories - 300
-                        || main.get(ctr1).getCalories() + side.get(ctr2).getCalories() + drink.get(ctr3).getCalories() <= dinnerCalories + 300)
+                    || main.get(ctr1).getCalories() + side.get(ctr2).getCalories() + drink.get(ctr3).getCalories() <= dinnerCalories + 300)
                     && ((main.get(ctr1).getType().equals("dinner") || main.get(ctr1).getType().equals("any"))
-                        && (side.get(ctr2).getType().equals("dinner") || side.get(ctr2).getType().equals("any"))
-                        && (drink.get(ctr3).getType().equals("dinner") || drink.get(ctr3).getType().equals("any"))))
+                    && (side.get(ctr2).getType().equals("dinner") || side.get(ctr2).getType().equals("any"))
+                    && (drink.get(ctr3).getType().equals("dinner") || drink.get(ctr3).getType().equals("any"))))
                     {
-
-                        Meal current = new Meal(main.get(ctr1), side.get(ctr2), drink.get(ctr3), "dinner" , "d");
-
                         Meal current = new Meal(main.get(ctr1), side.get(ctr2), drink.get(ctr3), "d");
-
                         DinnerMeals.add(current);
                         ctr4++;
                     }
@@ -202,34 +188,29 @@ public class Processor
             {
                 for(int ctr3 = 0; ctr3 <= drink.size(); ctr3++)
                 {
-
-                    if(main.get(ctr1).getCalories() + side.get(ctr2).getCalories() + drink.get(ctr3).getCalories() >= snackCalories)
+                    if((main.get(ctr1).getCalories() + side.get(ctr2).getCalories() + drink.get(ctr3).getCalories() >= snackCalories - 300
+                    || main.get(ctr1).getCalories() + side.get(ctr2).getCalories() + drink.get(ctr3).getCalories() <= snackCalories + 300)
+                    && ((main.get(ctr1).getType().equals("snack") || main.get(ctr1).getType().equals("any"))
+                    && (side.get(ctr2).getType().equals("snack") || side.get(ctr2).getType().equals("any"))
+                    && (drink.get(ctr3).getType().equals("snack") || drink.get(ctr3).getType().equals("any"))))
                     {
-                        Meal current = new Meal(main.get(ctr1), side.get(ctr2), drink.get(ctr3), "lunch" , "s");
-
-                        if((main.get(ctr1).getCalories() + side.get(ctr2).getCalories() + drink.get(ctr3).getCalories() >= snackCalories - 300
-                            || main.get(ctr1).getCalories() + side.get(ctr2).getCalories() + drink.get(ctr3).getCalories() <= snackCalories + 300)
-                        && ((main.get(ctr1).getType().equals("snack") || main.get(ctr1).getType().equals("any"))
-                            && (side.get(ctr2).getType().equals("snack") || side.get(ctr2).getType().equals("any"))
-                            && (drink.get(ctr3).getType().equals("snack") || drink.get(ctr3).getType().equals("any"))))
-                        {
-                            Meal current = new Meal(main.get(ctr1), side.get(ctr2), drink.get(ctr3), "s");
-                            SnackMeals.add(current);
-                            ctr4++;
-                        }
+                        Meal current = new Meal(main.get(ctr1), side.get(ctr2), drink.get(ctr3), "s");
+                        SnackMeals.add(current);
+                        ctr4++;
                     }
                 }
             }
-            return SnackMeals;
         }
-
-        public ArrayList<Meal> choice(int bChoice, int lChoice, int dChoice, int sChoice)
-        {
-            ArrayList<Meal> chosen = new ArrayList<Meal>();
-            chosen.add(blds.get(bChoice));
-            chosen.add(blds.get(lChoice));
-            chosen.add(blds.get(dChoice));
-            chosen.add(blds.get(sChoice));
-            return chosen;
-        }
+        return SnackMeals;
     }
+
+    public ArrayList<Meal> choice(int bChoice, int lChoice, int dChoice, int sChoice)
+    {
+        ArrayList<Meal> chosen = new ArrayList<Meal>();
+        chosen.add(blds.get(bChoice));
+        chosen.add(blds.get(lChoice));
+        chosen.add(blds.get(dChoice));
+        chosen.add(blds.get(sChoice));
+        return chosen;
+    }
+}

@@ -107,8 +107,12 @@ public class Processor
 
         int w,h,a; 
         String g;
-        System.out.println("please enter in your wieght in pounds:");
+        System.out.println("please enter in your weight in pounds:");
         w=sc.nextInt();
+        while(w > 500 || w < 50){
+            System.out.println("invalid weight, please enter in your real weight dawg: ");
+            w=sc.nextInt();
+        }
         System.out.println("please enter in your height in inches: ");
         h=sc.nextInt();
         System.out.println("please enter in your age in years: ");
@@ -117,10 +121,12 @@ public class Processor
         g = sc.nextLine();
         System.out.println("do you want to gain or lose weight: ");
         String go=sc.nextLine();
+        
+        
         int tc = calorieCalculator(w,h,a,g,go);
     }
 
-     public int calorieCalculator(int weightInPounds, int heightInInches, int age, String gender, String goal)
+    public int calorieCalculator(int weightInPounds, int heightInInches, int age, String gender, String goal)
 
     {
         double totalCalories = 0;

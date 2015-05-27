@@ -103,8 +103,6 @@ public class Processor
         
         side.add(rice);
         
-        
-
         int w,h,a; 
         String g;
         System.out.println("please enter in your weight in pounds:");
@@ -121,7 +119,6 @@ public class Processor
         g = sc.nextLine();
         System.out.println("do you want to gain or lose weight: ");
         String go=sc.nextLine();
-        
         
         int tc = calorieCalculator(w,h,a,g,go);
     }

@@ -102,15 +102,9 @@ target5.typeParameters=
 target5.width=80
 target5.x=230
 target5.y=10
-<<<<<<< HEAD
 target6.editor.height=820
 target6.editor.width=1320
 target6.editor.x=0
-=======
-target6.editor.height=700
-target6.editor.width=897
-target6.editor.x=148
->>>>>>> bfb7404e64aa37c3029724089422a47e72e53844
 target6.editor.y=22
 target6.height=50
 target6.name=Processor

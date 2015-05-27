@@ -17,15 +17,15 @@ public class DrinkItem extends  FoodItem
     public DrinkItem(String inputName, String t, int inputCalories)
     {
         super(inputName, inputCalories);
-        type =t;
-        w=0;
+        type = t;
+        w = 0;
     }
     public String getType()
     {
         return type; 
     }
     public void refill(){ 
-        calories+=calories-calories-(calories*w); 
-        w+=1;
+        calories += (calories * w); 
+        w += 1;
     }
 }

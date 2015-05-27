@@ -26,10 +26,14 @@ public class Processor
         DrinkItem soda = new DrinkItem("soda","lunch",182);
         DrinkItem cmilk = new DrinkItem("chocolate milk","lunch",209);
         DrinkItem aj = new DrinkItem("Apple juice", "lunch",113);
-        DrinkItem lemonade = new DrinkItem("lemonade","snack",99);
+        DrinkItem lemonade = new DrinkItem("lemonade","any",99);
         DrinkItem iceTea = new DrinkItem("ice tea", "dinner",2);
         DrinkItem smoothie = new DrinkItem("smoothie", "any", 400);
         DrinkItem thebloodofyourenemies = new DrinkItem("The Blood of your Enemies","dinner", 124);
+        DrinkItem sd1 = new DrinkItem("none","snack",0);
+        DrinkItem sd2 = new DrinkItem("none","snack",0);
+        DrinkItem sd3 = new DrinkItem("none","snack",0);
+        
         
         drink.add(water);
         drink.add(oj);
@@ -43,6 +47,9 @@ public class Processor
         drink.add(iceTea);
         drink.add(smoothie);
         drink.add(thebloodofyourenemies);
+        drink.add(sd1);
+        drink.add(sd2);
+        drink.add(sd3);
         
 
         MainItem pancake = new MainItem("Pancakes(x4)","breakfast",344,2);
@@ -63,6 +70,9 @@ public class Processor
         MainItem chicken = new MainItem("chicken","dinner",306,2);
         MainItem expensive = new MainItem("Strawberies Arnaud","dinner",300,2);
         MainItem fish = new MainItem("cooked atlantic salmonm","dinner",366,2);
+        MainItem sm1 = new MainItem("none","snack",0,0);
+        MainItem sm2 = new MainItem("none","snack",0,0);
+        MainItem sm3 = new MainItem("none","snack",0,0);
         
         main.add(pancake);
         main.add(cerial);
@@ -82,6 +92,9 @@ public class Processor
         main.add(chicken);
         main.add(expensive);
         main.add(fish);
+        main.add(sm1);
+        main.add(sm2);
+        main.add(sm3);
         
 
         
@@ -122,7 +135,9 @@ public class Processor
         System.out.println("do you want to gain or lose weight: ");
         String go=sc.nextLine();
         
-        
+        int breaky;
+        int lunchy;
+        int snacky;
         int tc = calorieCalculator(w,h,a,g,go);
     }
 
@@ -229,9 +244,9 @@ public class Processor
                 {
                     if((main.get(ctr1).getCalories() + side.get(ctr2).getCalories() + drink.get(ctr3).getCalories() >= snackCalories - 300
                     || main.get(ctr1).getCalories() + side.get(ctr2).getCalories() + drink.get(ctr3).getCalories() <= snackCalories + 300)
-                    && ((main.get(ctr1).getType().equals("snack") || main.get(ctr1).getType().equals("any"))
+                    && ((main.get(ctr1).getType().equals("snack") )
                     && (side.get(ctr2).getType().equals("snack") || side.get(ctr2).getType().equals("any"))
-                    && (drink.get(ctr3).getType().equals("snack") || drink.get(ctr3).getType().equals("any"))))
+                    && (drink.get(ctr3).getType().equals("snack") )))
                     {
                         Meal current = new Meal(main.get(ctr1), side.get(ctr2), drink.get(ctr3), "s");
                         SnackMeals.add(current);

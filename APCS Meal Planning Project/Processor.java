@@ -12,6 +12,7 @@ public class Processor
     ArrayList<SideItem> side = new ArrayList<SideItem>();
     ArrayList<Meal> blds = new ArrayList<Meal>();
     Scanner sc = new Scanner(System.in);
+    Scanner scan = new Scanner(System.in);
 
     /**
      * Constructor for objects of class Processor
@@ -113,17 +114,17 @@ public class Processor
         side.add(rice);
 
         int w,h,a; 
-        String g;
+        String g, go;
 
         System.out.println("Please enter in your weight in pounds: ");
-        w=sc.nextInt();
+        w = sc.nextInt();
         while(w >= 500 || w <= 50){
             System.out.println("Please enter in a weight between 50 - 500 pounds: ");
             w=sc.nextInt();
         }
 
         System.out.println("Please enter in your height in inches: ");
-        h=sc.nextInt();
+        h = sc.nextInt();
         while(h >= 84 || h <= 50)
         {
             System.out.println("Please enter in a height between 50 - 84 inches: ");
@@ -131,7 +132,7 @@ public class Processor
         }
 
         System.out.println("Please enter in your age in years: ");
-        a=sc.nextInt();
+        a = sc.nextInt();
         while(a >= 100 || a <= 10)
         {
             System.out.println("Please enter in an age between 10 - 100 years: ");
@@ -139,16 +140,16 @@ public class Processor
         }
 
         System.out.println("Please enter in your gender: ");
-        g = sc.nextLine();
-        while(!g.equals("male")){
-            while(!g.equals("female")){
-                System.out.println("Please enter in your gender: ");
-                g = sc.nextLine();
-            }
+        g = scan.nextLine();
+        while(!g.equals("male") && !g.equals("female"))
+        {
+            System.out.println("Please enter in if you want to gain, maintain, or lose weight: ");
+            g = sc.nextLine();
         }
+        
         System.out.println("Please enter in if you want to gain, maintain, or lose weight: ");
-        String go = sc.nextLine();
-        while(!go.equals("gain") || !go.equals("maintain") || !go.equals("lose"))
+        go = scan.nextLine();
+        while(!go.equals("gain") && !go.equals("maintain") && !go.equals("lose"))
         {
             System.out.println("Please enter in if you want to gain, maintain, or lose weight: ");
             go = sc.nextLine();

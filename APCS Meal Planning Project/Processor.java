@@ -33,8 +33,7 @@ public class Processor
         DrinkItem sd1 = new DrinkItem("none","snack",0);
         DrinkItem sd2 = new DrinkItem("none","snack",0);
         DrinkItem sd3 = new DrinkItem("none","snack",0);
-        
-        
+
         drink.add(water);
         drink.add(oj);
         drink.add(milk);
@@ -50,7 +49,6 @@ public class Processor
         drink.add(sd1);
         drink.add(sd2);
         drink.add(sd3);
-        
 
         MainItem pancake = new MainItem("Pancakes(x4)","breakfast",344,2);
         MainItem cerial = new MainItem("cerial","breakfast",606,3);
@@ -73,7 +71,7 @@ public class Processor
         MainItem sm1 = new MainItem("none","snack",0,0);
         MainItem sm2 = new MainItem("none","snack",0,0);
         MainItem sm3 = new MainItem("none","snack",0,0);
-        
+
         main.add(pancake);
         main.add(cerial);
         main.add(bagel);
@@ -95,9 +93,7 @@ public class Processor
         main.add(sm1);
         main.add(sm2);
         main.add(sm3);
-        
 
-        
         SideItem rice = new SideItem("rice","dinner",111,"none");
         SideItem gbeans = new SideItem("grean beans","dinner",44,"none");
         SideItem mpotates = new SideItem("mashed potatoes","dinner",214, "gravy");
@@ -113,26 +109,51 @@ public class Processor
         SideItem salad = new SideItem("salad","any",137,"ranch dressing");
         SideItem apple = new SideItem("Apple","any",95,"none");
         SideItem grapes = new SideItem("grapes","any", 62,"none");
-        
+
         side.add(rice);
-        
+
         int w,h,a; 
         String g;
-        System.out.println("please enter in your weight in pounds:");
+
+        System.out.println("Please enter in your weight in pounds: ");
         w=sc.nextInt();
-        while(w > 500 || w < 50){
-            System.out.println("invalid weight, please enter in your real weight dawg: ");
+        while(w >= 500 || w <= 50){
+            System.out.println("Please enter in a weight between 50 - 500 pounds: ");
             w=sc.nextInt();
         }
-        System.out.println("please enter in your height in inches: ");
+
+        System.out.println("Please enter in your height in inches: ");
         h=sc.nextInt();
-        System.out.println("please enter in your age in years: ");
+        while(h >= 84 || h <= 50)
+        {
+            System.out.println("Please enter in a height between 50 - 84 inches: ");
+            h = sc.nextInt();
+        }
+
+        System.out.println("Please enter in your age in years: ");
         a=sc.nextInt();
-        System.out.println("enter in your gender(male or female): ");
+        while(a >= 100 || a <= 10)
+        {
+            System.out.println("Please enter in an age between 10 - 100 years: ");
+            a=sc.nextInt();
+        }
+
+        System.out.println("Please enter in your gender: ");
         g = sc.nextLine();
-        System.out.println("do you want to gain or lose weight: ");
-        String go=sc.nextLine();
-        
+        while(!g.equals("male")){
+            while(!g.equals("female")){
+                System.out.println("Please enter in your gender: ");
+                g = sc.nextLine();
+            }
+        }
+        System.out.println("Please enter in if you want to gain, maintain, or lose weight: ");
+        String go = sc.nextLine();
+        while(!go.equals("gain") || !go.equals("maintain") || !go.equals("lose"))
+        {
+            System.out.println("Please enter in if you want to gain, maintain, or lose weight: ");
+            go = sc.nextLine();
+        }
+
         int breaky;
         int lunchy;
         int snacky;
@@ -164,10 +185,10 @@ public class Processor
                 for(int ctr3 = 0; ctr3 <= drink.size(); ctr3++)
                 {
                     if((main.get(ctr1).getCalories() + side.get(ctr2).getCalories() + drink.get(ctr3).getCalories() >= breakfastCalories - 300
-                    || main.get(ctr1).getCalories() + side.get(ctr2).getCalories() + drink.get(ctr3).getCalories() <= breakfastCalories + 300)
+                        || main.get(ctr1).getCalories() + side.get(ctr2).getCalories() + drink.get(ctr3).getCalories() <= breakfastCalories + 300)
                     && ((main.get(ctr1).getType().equals("breakfast") || main.get(ctr1).getType().equals("any"))
-                    && (side.get(ctr2).getType().equals("breakfast") || side.get(ctr2).getType().equals("any"))
-                    && (drink.get(ctr3).getType().equals("breakfast") || drink.get(ctr3).getType().equals("any"))))
+                        && (side.get(ctr2).getType().equals("breakfast") || side.get(ctr2).getType().equals("any"))
+                        && (drink.get(ctr3).getType().equals("breakfast") || drink.get(ctr3).getType().equals("any"))))
                     {
                         Meal current = new Meal(main.get(ctr1), side.get(ctr2), drink.get(ctr3), "b");
                         BreakfastMeals.add(current);
@@ -190,10 +211,10 @@ public class Processor
                 for(int ctr3 = 0; ctr3 <= drink.size(); ctr3++)
                 {
                     if((main.get(ctr1).getCalories() + side.get(ctr2).getCalories() + drink.get(ctr3).getCalories() >= lunchCalories - 300
-                    || main.get(ctr1).getCalories() + side.get(ctr2).getCalories() + drink.get(ctr3).getCalories() <= lunchCalories + 300)
+                        || main.get(ctr1).getCalories() + side.get(ctr2).getCalories() + drink.get(ctr3).getCalories() <= lunchCalories + 300)
                     && ((main.get(ctr1).getType().equals("lunch") || main.get(ctr1).getType().equals("any"))
-                    && (side.get(ctr2).getType().equals("lunch") || side.get(ctr2).getType().equals("any"))
-                    && (drink.get(ctr3).getType().equals("lunch") || drink.get(ctr3).getType().equals("any"))))
+                        && (side.get(ctr2).getType().equals("lunch") || side.get(ctr2).getType().equals("any"))
+                        && (drink.get(ctr3).getType().equals("lunch") || drink.get(ctr3).getType().equals("any"))))
                     {
                         Meal current = new Meal(main.get(ctr1), side.get(ctr2), drink.get(ctr3), "l");
                         LunchMeals.add(current);
@@ -216,10 +237,10 @@ public class Processor
                 for(int ctr3 = 0; ctr3 <= drink.size(); ctr3++)
                 {
                     if((main.get(ctr1).getCalories() + side.get(ctr2).getCalories() + drink.get(ctr3).getCalories() >= dinnerCalories - 300
-                    || main.get(ctr1).getCalories() + side.get(ctr2).getCalories() + drink.get(ctr3).getCalories() <= dinnerCalories + 300)
+                        || main.get(ctr1).getCalories() + side.get(ctr2).getCalories() + drink.get(ctr3).getCalories() <= dinnerCalories + 300)
                     && ((main.get(ctr1).getType().equals("dinner") || main.get(ctr1).getType().equals("any"))
-                    && (side.get(ctr2).getType().equals("dinner") || side.get(ctr2).getType().equals("any"))
-                    && (drink.get(ctr3).getType().equals("dinner") || drink.get(ctr3).getType().equals("any"))))
+                        && (side.get(ctr2).getType().equals("dinner") || side.get(ctr2).getType().equals("any"))
+                        && (drink.get(ctr3).getType().equals("dinner") || drink.get(ctr3).getType().equals("any"))))
                     {
                         Meal current = new Meal(main.get(ctr1), side.get(ctr2), drink.get(ctr3), "d");
                         DinnerMeals.add(current);
@@ -242,10 +263,10 @@ public class Processor
                 for(int ctr3 = 0; ctr3 <= drink.size(); ctr3++)
                 {
                     if((main.get(ctr1).getCalories() + side.get(ctr2).getCalories() + drink.get(ctr3).getCalories() >= snackCalories - 300
-                    || main.get(ctr1).getCalories() + side.get(ctr2).getCalories() + drink.get(ctr3).getCalories() <= snackCalories + 300)
+                        || main.get(ctr1).getCalories() + side.get(ctr2).getCalories() + drink.get(ctr3).getCalories() <= snackCalories + 300)
                     && ((main.get(ctr1).getType().equals("snack") )
-                    && (side.get(ctr2).getType().equals("snack") || side.get(ctr2).getType().equals("any"))
-                    && (drink.get(ctr3).getType().equals("snack") )))
+                        && (side.get(ctr2).getType().equals("snack") || side.get(ctr2).getType().equals("any"))
+                        && (drink.get(ctr3).getType().equals("snack") )))
                     {
                         Meal current = new Meal(main.get(ctr1), side.get(ctr2), drink.get(ctr3), "s");
                         SnackMeals.add(current);

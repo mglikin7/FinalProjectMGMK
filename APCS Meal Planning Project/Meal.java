@@ -36,9 +36,9 @@ public class Meal
 
     public void printMeal()
     {
-        System.out.println("Your meal has a main dish of " + main +
-            ", a side of " + side +
-            ", and a beverage of " + drink + ".");
+        System.out.println("Your meal has a main dish of " + main.getName() +
+            ", a side of " + side.getName() +
+            ", and a beverage of " + drink.getName() + ".");
         System.out.println("Your meal contains " + tc + " calories.");
     }
 

@@ -15,6 +15,8 @@ public class Processor
 
     /**
      * Constructor for objects of class Processor
+     * used to figure out how many calories should be consumed at breakfast:
+     * http://www.livestrong.com/article/298939-how-many-calories-should-i-eat-at-breakfast/
      */
     public void main()
     {
@@ -137,8 +139,28 @@ public class Processor
         
         int breaky;
         int lunchy;
+        int dinery;
         int snacky;
         int tc = calorieCalculator(w,h,a,g,go);
+        
+        choice(createBreakfasts((int)(tc/3)),createLunches((int)(tc/4)),createDinners((int)(tc/4)),createSnacks((int)(tc*(2/12.0))));
+        
+        System.out.println("here are your meals for the day: ");
+        System.out.println("breakfast: ");
+        blds.get(0).printMeal();
+        System.out.println("lunch: ");
+        blds.get(1).printMeal();
+        System.out.println("dinner: ");
+        blds.get(2).printMeal();
+        System.out.println("snacks: ");
+        blds.get(3).printMeal();
+        System.out.println();
+        
+        System.out.println("thank you for using this app, come again");
+        
+        
+        
+        
     }
 
     public int calorieCalculator(int weightInPounds, int heightInInches, int age, String gender, String goal)
@@ -258,13 +280,48 @@ public class Processor
         return SnackMeals;
     }
 
-    public ArrayList<Meal> choice(int bChoice, int lChoice, int dChoice, int sChoice)
+    public void choice(ArrayList<Meal> b, ArrayList<Meal> l,ArrayList<Meal> d,ArrayList<Meal> s)
     {
-        ArrayList<Meal> chosen = new ArrayList<Meal>();
-        chosen.add(blds.get(bChoice));
-        chosen.add(blds.get(lChoice));
-        chosen.add(blds.get(dChoice));
-        chosen.add(blds.get(sChoice));
-        return chosen;
+       Scanner scn = new Scanner(System.in);
+       System.out.println("here are your options for breakfasts, chose one by imputing its number: ");
+       int c1;
+       for(int x=1; x<=b.size(); x++){
+           System.out.println("option "+x+":");
+           b.get(x-1).printMeal();
+           System.out.println();
+        }
+       c1 = scn.nextInt();
+       
+       System.out.println("here are your options for lunches, chose one by imputing its number: ");
+       int c2;
+       for(int x=1; x<=l.size(); x++){
+           System.out.println("option "+x+":");
+           l.get(x-1).printMeal();
+           System.out.println();
+        }
+       c2 = scn.nextInt();
+       
+       System.out.println("here are your options for dinners, chose one by imputing its number: ");
+       int c3;
+       for(int x=1; x<=d.size(); x++){
+           System.out.println("option "+x+":");
+           d.get(x-1).printMeal();
+           System.out.println();
+        }
+       c3 = scn.nextInt();
+       
+       System.out.println("here are your options for snacks, chose one by imputing its number: ");
+       int c4;
+       for(int x=1; x<=s.size(); x++){
+           System.out.println("option "+x+":");
+           s.get(x-1).printMeal();
+           System.out.println();
+        }
+       c4 = scn.nextInt();
+       
+       blds.add(b.get(c1));
+       blds.add(l.get(c2));
+       blds.add(d.get(c3));
+       blds.add(s.get(c4));
     }
 }

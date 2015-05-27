@@ -30,8 +30,8 @@ objectbench.height=76
 objectbench.width=691
 package.editor.height=189
 package.editor.width=589
-package.editor.x=1187
-package.editor.y=25
+package.editor.x=786
+package.editor.y=22
 package.numDependencies=9
 package.numTargets=6
 package.showExtends=true
@@ -66,7 +66,7 @@ target2.y=110
 target3.editor.height=700
 target3.editor.width=900
 target3.editor.x=586
-target3.editor.y=311
+target3.editor.y=343
 target3.height=50
 target3.name=Meal
 target3.naviview.expanded=false
@@ -102,10 +102,17 @@ target5.typeParameters=
 target5.width=80
 target5.x=230
 target5.y=10
+<<<<<<< HEAD
 target6.editor.height=820
 target6.editor.width=1320
 target6.editor.x=0
 target6.editor.y=22
+=======
+target6.editor.height=700
+target6.editor.width=897
+target6.editor.x=947
+target6.editor.y=264
+>>>>>>> 7e747519c402d91a634181dc8c8610c42c3db16b
 target6.height=50
 target6.name=Processor
 target6.naviview.expanded=false

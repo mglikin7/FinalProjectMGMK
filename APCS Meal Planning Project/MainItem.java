@@ -17,24 +17,24 @@ public class MainItem extends FoodItem
     public MainItem(String inputName,   String t, int inputCalories, int s)
     {
         super(inputName,  inputCalories);
-        type =t;
-        size=s; 
+        type = t;
+        size = s; 
     }
     public String getType()
     {
         return type; 
     }
     public String getSize(){
-        String siZe=" "; 
-        if(size==1){
-            siZe="small";
+        String wordSize = " "; 
+        if(size == 1){
+            wordSize = "small";
         }
         else if(size==2){
-            siZe="medium";
+            wordSize = "medium";
         }
         else{
-            siZe="large";
+            wordSize = "large";
         }
-        return siZe; 
+        return wordSize; 
     }
 }

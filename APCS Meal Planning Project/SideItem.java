@@ -17,9 +17,9 @@ public class SideItem extends FoodItem
     public SideItem(String inputName,  String t, int inputCalories, String sauce)
     {
         super(inputName,  inputCalories);
-        type =t;
-        dip="none";
-        doDip=false; 
+        type = t;
+        dip = "none";
+        doDip = false; 
         if(sauce!="none"){
             dip(sauce);
         }
@@ -30,12 +30,11 @@ public class SideItem extends FoodItem
     }
     
     public void dip(String sauce){
-        dip=sauce;
-        doDip=true; 
+        dip = sauce;
+        doDip = true; 
     }
     
     public String getDip(){
         return dip; 
     }
-    
 }

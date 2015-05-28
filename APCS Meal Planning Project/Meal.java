@@ -15,8 +15,8 @@ public class Meal
         main = m;
         side = s;
         drink = d;
-        tc=(m.getCalories()+s.getCalories()+d.getCalories());
-        whatMeal= blds; 
+        tc = (m.getCalories()+s.getCalories()+d.getCalories());
+        whatMeal = blds; 
     }
 
     public FoodItem getMain()
@@ -45,16 +45,16 @@ public class Meal
     public String getMealType(){
         String mt = ""; 
         if(whatMeal .equals("b")){
-            mt= "Breakfast";
+            mt = "Breakfast";
         }
         else if(whatMeal .equals("l")){
-            mt= "Lunch";
+            mt = "Lunch";
         }
         else if(whatMeal .equals("d")){
-            mt= "Dinner";
+            mt = "Dinner";
         }
         else{
-            mt= "Snack";
+            mt = "Snack";
         }
         return mt; 
     }

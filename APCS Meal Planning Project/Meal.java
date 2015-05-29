@@ -1,8 +1,8 @@
 /**
- * Write a description of class Meal here.
+ * The Meal class creates meal objects that will be presented for users to pick from.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (MGMK)
+ * @version (5/29/15)
  */
 public class Meal
 {

@@ -1,8 +1,9 @@
 /**
- * Write a description of class MainItem here.
+ * The MainItem class creates MainItem objects, one of the three objects a meal must contain.
+ * The main dish in a meal.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (MGMK)
+ * @version (5/29/15)
  */
 public class MainItem extends FoodItem
 {

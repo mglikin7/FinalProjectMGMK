@@ -65,13 +65,8 @@ target2.x=150
 target2.y=110
 target3.editor.height=700
 target3.editor.width=900
-<<<<<<< HEAD
-target3.editor.x=107
-target3.editor.y=29
-=======
-target3.editor.x=586
-target3.editor.y=310
->>>>>>> 211237d6f7765a2e10506ab2dc02874bba503cb7
+target3.editor.x=730
+target3.editor.y=694
 target3.height=50
 target3.name=Meal
 target3.naviview.expanded=false
@@ -107,17 +102,10 @@ target5.typeParameters=
 target5.width=80
 target5.x=230
 target5.y=10
-<<<<<<< HEAD
 target6.editor.height=820
 target6.editor.width=1320
 target6.editor.x=0
 target6.editor.y=22
-=======
-target6.editor.height=700
-target6.editor.width=897
-target6.editor.x=669
-target6.editor.y=290
->>>>>>> 211237d6f7765a2e10506ab2dc02874bba503cb7
 target6.height=50
 target6.name=Processor
 target6.naviview.expanded=false

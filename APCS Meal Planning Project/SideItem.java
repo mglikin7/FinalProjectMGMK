@@ -1,8 +1,9 @@
 /**
- * Write a description of class SideItem here.
+ * The SideItem class creates SideItem objects, one of the three objects a meal must contain.
+ * The side dish in a meal.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (MGMK)
+ * @version (5/29/15)
  */
 public class SideItem extends FoodItem
 {

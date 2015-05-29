@@ -1,8 +1,9 @@
 /**
- * Write a description of class DrinkItem here.
+ * The DrinkItem class creates DrinkItem objects, one of the three objects a meal must contain.
+ * The drink in a meal.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (MGMK)
+ * @version (5/29/15)
  */
 public class DrinkItem extends  FoodItem
 {

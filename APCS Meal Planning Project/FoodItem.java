@@ -1,17 +1,15 @@
 /**
- * Write a description of class FoodItem here.
+ * The FoodItem class creates food objects that meal objects are created from.
+ * The MainItem, SideItem, and DrinkItem classes all extend FoodItem.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (MGMK)
+ * @version (5/29/15)
  */
 public class FoodItem
 {
     private String name;
-
     private int calories;
-    /**
-     * Constructor for objects of class FoodItem
-     */
+   
     public FoodItem(String inputName,  int inputCalories)
     {
         name = inputName;
@@ -19,19 +17,11 @@ public class FoodItem
         calories = inputCalories;
     }
 
-    /**
-     * Returns name of FoodItem
-     */
     public String getName()
     {
         return name;
     }
-
     
-
-    /**
-     * Returns name of FoodItem
-     */
     public int getCalories()
     {
         return calories;

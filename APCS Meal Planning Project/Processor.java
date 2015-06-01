@@ -1,9 +1,9 @@
 import java.util.*;
 /**
- * Write a description of class Processor here.
+ * Where everything is done (contains the main method).
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (MGMK) 
+ * @version (5/29/15)
  */
 public class Processor
 {
@@ -178,10 +178,6 @@ public class Processor
         System.out.println();
         
         System.out.println("thank you for using this app, come again");
-        
-        
-        
-        
     }
 
     public int calorieCalculator(int weightInPounds, int heightInInches, int age, String gender, String goal)
